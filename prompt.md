@@ -1,7 +1,7 @@
 # PROMPT — Backend Place de marché de clés de licences numériques
 # Version : 2.0 — Optimisation + Sécurité incluses
 
-## CONTEXTE
+## CONTEXTE 
 J'ai déjà un frontend React.js (Vite) + Tailwind CSS entièrement codé avec des données fictives que tu vas adapter au backend.
 Je n'ai besoin QUE du backend. Ne génère aucun code frontend, aucun design, aucune page React.
 
