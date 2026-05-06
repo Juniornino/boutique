@@ -1,0 +1,68 @@
+[
+  {
+    "_id": "64a1b2c3d4e5f60001000001",
+    "name": "Windows 11 Pro",
+    "category": "OS",
+    "price": 19500,
+    "image": "https://images.unsplash.com/photo-1633419461186-7d40a38105ec?w=800&q=80",
+    "description": "Licence OEM à vie, multilingue.",
+    "isActive": true,
+    "availableKeysCount": 45,
+    "soldCount": 150
+  },
+  {
+    "_id": "64a1b2c3d4e5f60001000002",
+    "name": "Office 2021 Pro Plus",
+    "category": "OFFICE",
+    "price": 29500,
+    "image": "https://images.unsplash.com/photo-1618424181497-157f25b6ddd5?w=800&q=80",
+    "description": "Suite complète : Word, Excel, PowerPoint...",
+    "isActive": true,
+    "availableKeysCount": 8,
+    "soldCount": 200
+  },
+  {
+    "_id": "64a1b2c3d4e5f60001000003",
+    "name": "Kaspersky Total Security",
+    "category": "SECURITY",
+    "price": 12500,
+    "image": "https://images.unsplash.com/photo-1563206767-5b18f218e8de?w=800&q=80",
+    "description": "Protection 1 an pour 3 appareils.",
+    "isActive": true,
+    "availableKeysCount": 67,
+    "soldCount": 300
+  },
+  {
+    "_id": "64a1b2c3d4e5f60001000004",
+    "name": "Windows 10 Pro",
+    "category": "OS",
+    "price": 16500,
+    "image": "https://images.unsplash.com/photo-1585079542156-2755d9c8a094?w=800&q=80",
+    "description": "Licence Retail, idéale pour mise à jour.",
+    "isActive": true,
+    "availableKeysCount": 3,
+    "soldCount": 400
+  },
+  {
+    "_id": "64a1b2c3d4e5f60001000005",
+    "name": "Office 2019 Pro Plus",
+    "category": "OFFICE",
+    "price": 23000,
+    "image": "https://images.unsplash.com/photo-1588508065123-287b28e0131c?w=800&q=80",
+    "description": "Pack classique sans abonnement.",
+    "isActive": false,
+    "availableKeysCount": 0,
+    "soldCount": 120
+  },
+  {
+    "_id": "64a1b2c3d4e5f60001000006",
+    "name": "Bitdefender Antivirus Plus",
+    "category": "SECURITY",
+    "price": 10500,
+    "image": "https://images.unsplash.com/photo-1614064641913-6b71a3061283?w=800&q=80",
+    "description": "Protection légère et performante.",
+    "isActive": true,
+    "availableKeysCount": 25,
+    "soldCount": 80
+  }
+]

@@ -1,0 +1,70 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model UserRef {
+  id        String   @id   // = _id MongoDB
+  email     String   @unique
+  phone     String?
+  orders    Order[]
+}
+
+model ProductRef {
+  id                String       @id   // = _id MongoDB
+  name              String
+  price             Decimal      @db.Decimal(10,2)
+  promotionalPrice  Decimal?     @db.Decimal(10,2)
+  licenseKeys       LicenseKey[]
+  orders            Order[]
+}
+
+model LicenseKey {
+  id        String        @id @default(uuid())
+  code      String        @unique
+  status    LicenseStatus @default(AVAILABLE)
+  productId String
+  orderId   String?       @unique
+  product   ProductRef    @relation(fields: [productId], references: [id])
+  order     Order?        @relation(fields: [orderId], references: [id])
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+  @@index([productId, status])
+}
+
+model Order {
+  id          String      @id @default(uuid())
+  userId      String
+  productId   String
+  totalAmount Decimal     @db.Decimal(10,2)
+  status      OrderStatus @default(PENDING)
+  paymentReference String? @unique
+  user        UserRef     @relation(fields: [userId], references: [id])
+  product     ProductRef  @relation(fields: [productId], references: [id])
+  licenseKey  LicenseKey?
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  @@index([userId])
+  @@index([status])
+  @@index([createdAt(sort: Desc)])
+  @@index([status, createdAt(sort: Desc)])
+  @@index([userId, createdAt(sort: Desc)])
+}
+
+enum LicenseStatus {
+  AVAILABLE
+  SOLD
+  RESERVED
+}
+
+enum OrderStatus {
+  PENDING
+  PROCESSING
+  COMPLETED
+  FAILED
+  REFUNDED
+}

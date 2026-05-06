@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Environment files (contain secrets — NEVER commit)
+# NOTE: run "git rm --cached backend/.env" to untrack the existing .env
+.env
+!.env.example
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Build output
+dist/
+dist-ssr/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
